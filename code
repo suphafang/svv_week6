@@ -3,38 +3,38 @@ pipeline {
     stages {
         stage('pre -build') {
             steps {
-                sh 'echo PreBuild'
+                sh 'echo PreBuild #2'
             }
         }
         stage('build') {
             steps {
-                sh 'echo Build'
+                sh 'echo Build #2'
             }
         }
         stage('Unit tests') {
             steps {
-                sh 'echo Tests'
+                sh 'echo Tests #2'
             }
         }
         stage('deploy') {
             steps {
-                sh 'echo Deploy'
+                sh 'echo Deploy #2'
             }
         }
         stage('Regression tests') {
             steps {
-                sh 'echo Regression tests'
+                sh 'echo Regression tests #2'
             }
         }
         stage('Release to prod') {
             steps {
-                sh 'echo Release to prod'
+                sh 'echo Release to prod #2'
             }
         }
     }
  post {
         always {
-            echo 'always'
+            echo 'always #2'
         }
     }
 }
