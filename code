@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+    stages {
+        stage('pre -build') {
+            steps {
+                sh 'echo PreBuild'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'echo Build'
+            }
+        }
+        stage('Unit tests') {
+            steps {
+                sh 'echo Tests'
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh 'echo Deploy'
+            }
+        }
+        stage('Regression tests') {
+            steps {
+                sh 'echo Regression tests'
+            }
+        }
+        stage('Release to prod') {
+            steps {
+                sh 'echo Release to prod'
+            }
+        }
+    }
+ post {
+        always {
+            echo 'always'
+        }
+    }
+}
